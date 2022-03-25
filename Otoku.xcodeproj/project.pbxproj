@@ -11,7 +11,10 @@
 		0911698327EA052B00614A6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911698227EA052B00614A6D /* ContentView.swift */; };
 		0911698527EA052B00614A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0911698427EA052B00614A6D /* Assets.xcassets */; };
 		0911698827EA052B00614A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0911698727EA052B00614A6D /* Preview Assets.xcassets */; };
+		093C803527ED61AB0025C8D7 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C803427ED61AB0025C8D7 /* ArrowView.swift */; };
+		093C803827ED63850025C8D7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C803727ED63850025C8D7 /* TestView.swift */; };
 		0958171C27EAC472004AF048 /* PartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958171B27EAC472004AF048 /* PartsView.swift */; };
+		0958171E27EC6068004AF048 /* StickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958171D27EC6068004AF048 /* StickView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +23,10 @@
 		0911698227EA052B00614A6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0911698427EA052B00614A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0911698727EA052B00614A6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		093C803427ED61AB0025C8D7 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		093C803727ED63850025C8D7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		0958171B27EAC472004AF048 /* PartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsView.swift; sourceTree = "<group>"; };
+		0958171D27EC6068004AF048 /* StickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 		0911697427EA052B00614A6D = {
 			isa = PBXGroup;
 			children = (
+				093C803627ED63650025C8D7 /* TestView */,
 				0958171A27EAC3E3004AF048 /* PartsView */,
 				0911697F27EA052B00614A6D /* Otoku */,
 				0911697E27EA052B00614A6D /* Products */,
@@ -70,10 +77,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		093C803627ED63650025C8D7 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				093C803727ED63850025C8D7 /* TestView.swift */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
 		0958171A27EAC3E3004AF048 /* PartsView */ = {
 			isa = PBXGroup;
 			children = (
 				0958171B27EAC472004AF048 /* PartsView.swift */,
+				0958171D27EC6068004AF048 /* StickView.swift */,
+				093C803427ED61AB0025C8D7 /* ArrowView.swift */,
 			);
 			path = PartsView;
 			sourceTree = "<group>";
@@ -148,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093C803827ED63850025C8D7 /* TestView.swift in Sources */,
 				0958171C27EAC472004AF048 /* PartsView.swift in Sources */,
 				0911698327EA052B00614A6D /* ContentView.swift in Sources */,
+				093C803527ED61AB0025C8D7 /* ArrowView.swift in Sources */,
 				0911698127EA052B00614A6D /* OtokuApp.swift in Sources */,
+				0958171E27EC6068004AF048 /* StickView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

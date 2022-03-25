@@ -12,6 +12,7 @@ struct PartsView: View {
     var body: some View {
         DynamicHeightTextEditor(text: $text, placeholder: "テキストを入力", minHeight: 40, maxHeight: 150)
             
+            
     }
     
 }
@@ -122,7 +123,7 @@ struct DynamicHeightTextEditor: View {
 
             DynamicHeightTextview(text: $text, height: $textHeight)
         }
-        .frame(height: textEditorHeight) //← ここで高さを反映
+        .frame(width: 200, height: textEditorHeight) //← ここで高さを反映
         .border(Color.black, width: 1)
     }
 }
