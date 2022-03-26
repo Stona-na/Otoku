@@ -11,7 +11,7 @@ import SwiftUI
 struct OtokuApp: App {
     var body: some Scene {
         WindowGroup {
-            TestView()
+            StickView()
         }
     }
 }
