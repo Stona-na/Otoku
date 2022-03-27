@@ -40,11 +40,14 @@ struct StickPartsView: View {
     @State private var CurrentPos: CGPoint = CGPoint(x:200, y:100)
     @State private var CurrentPosBlue: CGPoint = CGPoint(x:300, y:0)
     @State private var CurrentPosRed: CGPoint = CGPoint(x:100, y:100)
-    @State private var RedSaved: CGPoint = CGPoint(x:100, y:100)
-    @State private var BlueSaved: CGPoint = CGPoint(x:300, y:100)
+    @State private var RedSaved: CGPoint = CGPoint(x:100, y:100) //ok?
+    @State private var BlueSaved: CGPoint = CGPoint(x:300, y:100) //ok?
+    @State private var DistanceRed: CGFloat = 0
+    @State private var DistanceBlue: CGFloat = 0
     
     
     var body: some View {
+        
         
         
         
@@ -54,27 +57,15 @@ struct StickPartsView: View {
                 path.addLine(to: CGPoint(x: CurrentPosBlue.x, y: CurrentPos.y))
             }
             .stroke(lineWidth: 10)
-            .gesture(DragGesture(minimumDistance: 10)
+            .gesture(DragGesture(minimumDistance: 0)
                         .onChanged{ value in
                 
                 self.InitCurrentPos = value.startLocation
                 self.CurrentPos = value.location
                 
-                if InitCurrentPos.x < RedSaved.x {
-                CurrentPosRed.x = CurrentPos.x + (InitCurrentPos.x - RedSaved.x)
-                } else {
-                    CurrentPosRed.x = CurrentPos.x - (InitCurrentPos.x - RedSaved.x)
-                }
-                
-                if InitCurrentPos.x < BlueSaved.x {
+                CurrentPosRed.x = CurrentPos.x - (InitCurrentPos.x - RedSaved.x)
                 CurrentPosBlue.x = CurrentPos.x - (InitCurrentPos.x - BlueSaved.x)
-                } else {
-                    CurrentPosBlue.x = CurrentPos.x + (InitCurrentPos.x - BlueSaved.x)
-                }
                 
-                
-                
-   
             })
             
             
@@ -89,7 +80,6 @@ struct StickPartsView: View {
                             .onEnded{value in
                     self.RedSaved = value.predictedEndLocation
                 })
-                
             
             Circle()
                 .fill(Color.blue)
@@ -102,19 +92,11 @@ struct StickPartsView: View {
                 }
                             .onEnded{value in
                     self.BlueSaved = value.predictedEndLocation
+                    
                 })
-            
-            
         }
-        
     }
-    
-    
-    
-    
 }
-
-
 struct ExtractedView: View {
     var body: some View {
         StickPartsView()

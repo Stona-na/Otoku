@@ -85,12 +85,20 @@
 			path = TestView;
 			sourceTree = "<group>";
 		};
+		093C803927EFE54F0025C8D7 /* ArrowView */ = {
+			isa = PBXGroup;
+			children = (
+				093C803427ED61AB0025C8D7 /* ArrowView.swift */,
+			);
+			path = ArrowView;
+			sourceTree = "<group>";
+		};
 		0958171A27EAC3E3004AF048 /* PartsView */ = {
 			isa = PBXGroup;
 			children = (
+				093C803927EFE54F0025C8D7 /* ArrowView */,
 				0958171B27EAC472004AF048 /* PartsView.swift */,
 				0958171D27EC6068004AF048 /* StickView.swift */,
-				093C803427ED61AB0025C8D7 /* ArrowView.swift */,
 			);
 			path = PartsView;
 			sourceTree = "<group>";
